@@ -1,171 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TableLayout
+
+    <TextView
+        android:id="@+id/mainView"
         android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:stretchColumns="*" >
-
-        <TextView
-            android:id="@+id/mainView"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#1616D8"
-            android:textStyle="bold"
-            android:text="Accelerometer Data:" />
-
-        <TableRow
-            android:id="@+id/acc"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
-
-            <TextView
-                android:id="@+id/view1-1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#DD7812"
-                android:text="1" />
-
-
-            <TextView
-                android:id="@+id/view1-2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#DD7812"
-                android:text="2" />
-
-            <TextView
-                android:id="@+id/view1-3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#DD7812"
-                android:text="3" />
-        </TableRow>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#1616D8"
-            android:textStyle="bold"
-            android:text="Proximity Sensor Data:" />
-
-        <TextView
-            android:id="@+id/proxView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#DD7812"
-            android:text="1" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#1616D8"
-            android:textStyle="bold"
-            android:text="Gravity Sensor Data:" />
-
-        <TableRow
-            android:id="@+id/gravity"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
-
-            <TextView
-                android:id="@+id/view3-1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#DD7812"
-                android:text="1" />
-
-            <TextView
-                android:id="@+id/view3-2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#DD7812"
-                android:text="2" />
-
-            <TextView
-                android:id="@+id/view3-3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#DD7812"
-                android:text="3" />
-        </TableRow>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#1616D8"
-            android:textStyle="bold"
-            android:text="Step Sensor Data:" />
-
-        <TextView
-            android:id="@+id/stepView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#DD7812"
-            android:text="1" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#1616D8"
-            android:textStyle="bold"
-            android:text="Light Sensor Data:" />
-
-        <TableRow
-            android:id="@+id/lit"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
-
-            <TextView
-                android:id="@+id/view5-1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#DD7812"
-                android:text="1" />
-        </TableRow>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#1616D8"
-            android:textStyle="bold"
-            android:text="Orientation Sensor Data:" />
-
-        <TableRow
-            android:id="@+id/ori"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
-
-            <TextView
-                android:id="@+id/view6-1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#DD7812"
-                android:text="1" />
-            <TextView
-                android:id="@+id/view6-2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#DD7812"
-                android:text="2" />
-            <TextView
-                android:id="@+id/view6-3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#DD7812"
-                android:text="3" />
-        </TableRow>
+        android:textColor="#1616D8"
+        android:textStyle="bold"
+        android:layout_below="@+id/mainView"
+        android:text="Line1: \n-Line2\n-Line3"
+        />
+    "n"
+    <TextView
+        android:id="@+id/acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainView"
+        android:textColor="#DD7812"
+        android:text="1" />
 
 
 
-    </TableLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:textColor="#1616D8"
+        android:textStyle="bold"
+        android:text="Proximity Sensor Data:" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/proxView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="270dp"
+        android:textColor="#DD7812"
+        android:text="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:textColor="#1616D8"
+        android:textStyle="bold"
+        android:text="Gravity Sensor Data:" />
+
+    <TextView
+        android:id="@+id/grav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:textColor="#DD7812"
+        android:text="1" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:textColor="#1616D8"
+        android:textStyle="bold"
+        android:text="Step Sensor Data:" />
+
+    <TextView
+        android:id="@+id/stepView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="370dp"
+        android:textColor="#DD7812"
+        android:text="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:textColor="#1616D8"
+        android:textStyle="bold"
+        android:text="Light Sensor Data:" />
+
+    <TextView
+        android:id="@+id/lit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="420dp"
+        android:textColor="#DD7812"
+        android:text="1" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:textColor="#1616D8"
+        android:textStyle="bold"
+        android:text="Orientation Sensor Data:" />
+
+
+    <TextView
+        android:id="@+id/ori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="470dp"
+        android:textColor="#DD7812"
+        android:text="1" />
+
+
+
+
+</RelativeLayout>
+

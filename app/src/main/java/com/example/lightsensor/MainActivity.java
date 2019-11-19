@@ -1,7 +1,5 @@
 package com.example.lightsensor;
 
-
-
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.os.Bundle;
@@ -9,13 +7,16 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.hardware.SensorManager;
-import android.widget.TableRow;
 import android.widget.TextView;
+
+
 import android.content.Context;
 import android.hardware.Sensor;
 
 import android.view.View;
 import android.view.MenuItem;
+
+import com.example.lightsensor.R;
 
 import java.util.List;
 
@@ -72,27 +73,20 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     public void onSensorChanged(SensorEvent event) {
         int sensorType = event.sensor.getType();
 
-        TableRow accTable = findViewById(R.id.acc);
-        TextView accX = (TextView) accTable.getChildAt(0);
-        TextView accY = (TextView) accTable.getChildAt(1);
-        TextView accZ = (TextView) accTable.getChildAt(2);
+        TextView accX = (TextView) findViewById(R.id.acc);
 
         TextView prox = (TextView) findViewById(R.id.proxView);
 
-        TableRow gravTable = findViewById(R.id.gravity);
-        TextView gravX = (TextView) gravTable.getChildAt(0);
-        TextView gravY = (TextView) gravTable.getChildAt(1);
-        TextView gravZ = (TextView) gravTable.getChildAt(2);
+        TextView gravX = (TextView) findViewById(R.id.grav);
 
         TextView step = (TextView) findViewById(R.id.stepView);
 
-        TableRow litTable = findViewById(R.id.lit);
-        TextView litX = (TextView) litTable.getChildAt(0);
 
-        TableRow oriTable = findViewById(R.id.ori);
-        TextView oriX = (TextView) oriTable.getChildAt(0);
-        TextView oriY = (TextView) oriTable.getChildAt(1);
-        TextView oriZ = (TextView) oriTable.getChildAt(2);
+        TextView litX = (TextView) findViewById(R.id.lit);
+
+
+        TextView oriX = (TextView) findViewById(R.id.ori);
+
 
 
         DecimalFormat df =new DecimalFormat("#0.00");
@@ -100,16 +94,14 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         switch (sensorType) {
             case Sensor.TYPE_ACCELEROMETER:
                 accX.setText(df.format(event.values[0]));
-                accY.setText(df.format(event.values[1]));
-                accZ.setText(df.format(event.values[2]));
+
                 break;
             case Sensor.TYPE_PROXIMITY:
                 prox.setText(df.format(event.values[0]));
                 break;
             case Sensor.TYPE_GRAVITY:
                 gravX.setText(df.format(event.values[0]));
-                gravY.setText(df.format(event.values[1]));
-                gravZ.setText(df.format(event.values[2]));
+
                 break;
             case Sensor.TYPE_STEP_COUNTER:
                 step.setText(df.format(event.values[0]));
@@ -119,8 +111,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 break;
             case Sensor.TYPE_ORIENTATION:
                 oriX.setText(df.format(event.values[0]));
-                oriY.setText(df.format(event.values[1]));
-                oriZ.setText(df.format(event.values[2]));
+
                 break;
 
         }
